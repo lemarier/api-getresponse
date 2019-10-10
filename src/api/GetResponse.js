@@ -25,6 +25,8 @@ class GetResponse {
             req.campaign = { campaignId: data.token };
         if (!this.isEmpty(data.ip))
             req.ipAddress = data.ip;
+        if (!this.isEmpty(data.tags))
+            req.tags = data.tags;
         if (!this.isEmpty(data.customFields)) {
             req.customFieldValues = [];
             data.customFields.forEach(field => {
